@@ -25,6 +25,7 @@ describe("TasksModule (e2e)", () => {
       .useValue(mockNotificationService)
       .compile();
 
+    // @ts-ignore
     app = moduleFixture.createNestApplication();
     await app.init();
 
