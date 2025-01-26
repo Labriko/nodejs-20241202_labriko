@@ -18,5 +18,12 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "allowJs": true
-  }
+  },
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "./dist/**/*"
+  ]
 }
