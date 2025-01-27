@@ -3,10 +3,10 @@ import { CanActivate, ExecutionContext, ForbiddenException } from "@nestjs/commo
 export class RolesGuard implements CanActivate {
   canActivate(context: ExecutionContext) {
     const request = context.switchToHttp().getRequest();
-    const userRole = request.getHeader("x-role");
+    const userRole = request.get("x-role");
 
     if (userRole !== 'admin') {
-      throw new ForbiddenException();
+      throw new ForbiddenException('Доступ запрещён: требуется роль admin');
     }
 
     return true;

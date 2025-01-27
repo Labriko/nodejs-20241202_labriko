@@ -9,7 +9,7 @@ export class ApiVersionInterceptor implements NestInterceptor {
       map(data => ({
         ...data,
         apiVersion: "1.0",
-        executionTime: Date.now() - time,
+        executionTime: `${Date.now() - time}ms`,
       }))
     )
   }
